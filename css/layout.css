@@ -9,179 +9,141 @@
  This plugin is released under the MIT License.
 
  -----------------------**/
-/* CHANGE THE PAGER STYLE */
-.docSlider-pager {
-  position: fixed;
-  z-index: 100;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-}
-
-/* CHANGE THE BUTTON STYLE */
-.docSlider-button {
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: block;
-  margin: 5px 0;
-  background-color: #333;
-  opacity: 0.25;
-  appearance: none;
-  border: none;
-  box-sizing: border-box;
-}
-
-.docSlider-button.selected {
-  opacity: 1;
-}
-
-.docSlider-button:active {
-  outline: none;
-}
 
 /**------------------------------
   REWRITING IS NOT RECOMMENDED
  -----------------------------**/
 html,
 body {
-  overflow: hidden;
-  touch-action: none;
-  height: 100%;
+    overflow: hidden;
+    touch-action: none;
+    height: 100%;
 }
 
-html,
-body,
 .docSlider,
 .docSlider-inner,
 .docSlider-page {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  appearance: none;
-  border: none;
-  outline: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    border: none;
+    outline: none;
 }
 
-html:active,
-body:active,
 .docSlider:active,
 .docSlider-inner:active,
 .docSlider-page:active {
-  outline: none;
+    outline: none;
 }
 
 .docSlider {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
 }
 
 .docSlider-inner {
-  width: inherit;
-  height: inherit;
-  position: fixed;
-  top: 0;
-  left: 0;
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    top: 0;
+    left: 50%;
 }
 
 .docSlider-page {
-  height: inherit;
-  width: inherit;
-  overflow: auto;
-  position: absolute;
-  overflow-scrolling: touch;
+    height: inherit;
+    width: inherit;
+    max-width: 100%;
+    overflow: auto;
+    position: absolute;
+    overflow-scrolling: touch;
 }
 
 .docSlider-pager {
-  display: none;
+    display: none;
 }
 
 /* ----------------------------------------------------------------
        common
 ---------------------------------------------------------------- */
 html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 * {
-  font-family: 'NanumSquare', sans-serif !important;
-  letter-spacing: -0.05em;
+    font-family: 'NanumSquare', sans-serif !important;
+    letter-spacing: -0.05em;
 }
 .display-m {
-  display: none;
+    display: none;
 }
 .inner-col {
-  position: relative;
-  width: 1240px;
-  max-width: 90%;
-  margin: 0 auto;
+    position: relative;
+    width: 1240px;
+    max-width: 90%;
+    margin: 0 auto;
 }
-
 /* content */
 html,
 body,
 .wrap {
-  position: relative;
-  height: 100%;
+    position: relative;
+    height: 100%;
 }
 
 .puppy-wrap {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .puppy-wrap .swiper-slide {
-  text-align: center;
-  font-size: 3rem;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .puppy-wrap .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .puppy-wrap .swiper-slide:nth-child(even) {
-  background: pink;
+    background: pink;
 }
 .puppy-wrap .swiper-slide:nth-child(odd) {
-  background: orange;
+    background: orange;
 }
 
 @media screen and (max-width: 1024px) {
-  html {
-    font-size: 24px;
-    background: #f8f8f8;
-  }
-  .wrap {
-    width: 768px;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .display-pc {
-    display: none;
-  }
-  .display-m {
-    display: block;
-  }
+    html {
+        font-size: 24px;
+        background: #f8f8f8;
+    }
+    .docSlider-inner {
+        width: 768px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .display-pc {
+        display: none;
+    }
+    .display-m {
+        display: block;
+    }
 }
 @media screen and (max-width: 768px) {
-  html {
-    font-size: 3.2vw;
-  }
+    html {
+        font-size: 3.2vw;
+    }
 }
 @media screen and (max-width: 319px) {
-  html {
-    font-size: 10px;
-  }
+    html {
+        font-size: 10px;
+    }
 }
