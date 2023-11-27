@@ -10,26 +10,37 @@
         <link href="css/layout.css" rel="stylesheet" type="text/css" />
 
         <script src="js/docSlider.min.js" type="text/javascript"></script>
+        <script src="js/lottie-player.js"></script>
         <script src="js/layout.js" type="text/javascript"></script>
     </head>
     <body>
         <div class="wrap">
             <header>
-                <h1><a title="PUPPYCAT home" target="_blank" href="#">PUPPYCAT</a></h1>
-                <a title="puppcat 앱 다운로드" target="_blank" href="#" class="btn-down">앱 다운로드</a>
+                <h1>
+                    <a title="PUPPYCAT home" target="_blank" href="#" class="logo"><span class="blind">puppycat</span></a>
+                </h1>
+                <a title="puppcat 앱 다운로드" target="_blank" href="#" class="btn-down">
+                    <lottie-player src="img/lottie_puppy_btn_appdown.json" background="transparent" speed=".9" loop autoplay></lottie-player>
+                </a>
             </header>
             <div class="docSlider">
                 <section class="main-visual-col">
                     <div class="inner-col">
-                        <h2>close to you PUPPYCAT</h2>
+                        <h2><span class="blind">close to you PUPPYCAT</span></h2>
                         <p>
                             이 세상 모든 누구나의 강아지와 고양이가<br />
                             모여드는 당신에게 가장 가까운 곳
                         </p>
+
                         <div class="app-box">
-                            <a title="PUPPYCAT google Play" target="_blank" href="#" class="app-google">google Play</a>
-                            <a title="PUPPYCAT App Store" target="_blank" href="#" class="app-store">App Store</a>
-                            <img src="img/img_puppy_qr.png" class="qr코드" />
+                            <a title="PUPPYCAT google Play" target="_blank" href="#" class="app-google">
+                                <img src="img/img_puppy_googleplay.png" alt="퍼피캣 구글플레이" />
+                            </a>
+
+                            <a title="PUPPYCAT App Store" target="_blank" href="#" class="app-store">
+                                <img src="img/img_puppy_appstore.png" alt="퍼피캣 앱스토어" />
+                            </a>
+                            <img src="img/img_puppy_qr.png" class="app-qr" />
                         </div>
                     </div>
                 </section>
@@ -37,8 +48,8 @@
                     <div class="inner-col">
                         <div class="txt-box">
                             <h2>
-                                <span>더 가깝고</span>
-                                <span>더 사랑스럽개</span>
+                                <span>더 가깝고<span class="lottie-cat"></span></span><br />
+                                <span>더 사랑스럽개<span class="lottie-dog"></span></span>
                             </h2>
                             <p>
                                 소셜 미디어로 사랑스러운<br />
@@ -46,8 +57,12 @@
                             </p>
                         </div>
                         <div class="img-box">
-                            <div class="mobile-img"></div>
-                            <div class="mobile-img"></div>
+                            <div class="mobile-img">
+                                <img src="img/img_puppy_scroll_sns.png" alt="소셜미디어 이미지" />
+                            </div>
+                            <div class="mobile-img">
+                                <img src="img/img_puppy_scroll_message.png" alt="소셜미디어 이미지" />
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -55,7 +70,7 @@
                     <div class="slide-arae">슬라이드 들어갈꺼임~</div>
                     <footer>
                         <div class="inner-col">
-                            <h2 class="f-logo">PUPPYCAT</h2>
+                            <h2 class="f-logo"><span class="blind">PUPPYCAT</span></h2>
                             <address>
                                 <span>김정윤</span>
                                 <span>123-12-12345</span>
@@ -64,7 +79,7 @@
                                 <span>(01245) 서울특별시 서초구 서초대로46길 19-18</span>
                             </address>
                             <p class="copyright">Copyright ⓒ 2023 Uxplus engine. All rights Reserved.</p>
-                            <a title="puppycat instagram" target="_blank" href="#" class="go-insta">puppycat instagram</a>
+                            <a title="puppycat instagram" target="_blank" href="#" class="go-insta"><span class="blind">puppycat instagram</span></a>
                         </div>
                     </footer>
                 </section>
