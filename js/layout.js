@@ -28,10 +28,10 @@ window.addEventListener('load', function () {
 
     if (varUA.indexOf('android') > -1) {
         //안드로이드
-        console.log('안드로이드');
+        alert('안드로이드');
     } else if (varUA.indexOf('iphone') > -1 || varUA.indexOf('ipad') > -1 || varUA.indexOf('ipod') > -1) {
         //IOS
-        console.log('ios');
+        alert('IOS');
     }
 });
 
