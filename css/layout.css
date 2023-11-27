@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 /**-----------------------
 
  docSlider.js - ver.3.0.1
@@ -67,20 +66,29 @@ body {
 /* ----------------------------------------------------------------
        common
 ---------------------------------------------------------------- */
+/* NanumSquareNeo light: 500; normal:600; bold:700; extrabold:800; black:900 */
 html {
     font-size: 62.5%;
+    font-family: 'NanumSquareNeo', sans-serif !important;
     scroll-behavior: smooth;
 }
 * {
-    font-family: 'NanumSquare', sans-serif !important;
+    font-family: 'NanumSquareNeo', sans-serif !important;
     letter-spacing: -0.05em;
 }
 .display-m {
     display: none;
 }
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 .inner-col {
     position: relative;
-    width: 1240px;
+    width: 1330px;
     max-width: 90%;
     margin: 0 auto;
 }
@@ -91,7 +99,32 @@ body,
     position: relative;
     height: 100%;
 }
-
+section {
+    background-color: #fffef9;
+}
+.docSlider-page {
+    padding-top: 7.3rem;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 12rem;
+    z-index: 10;
+}
+.main-visual-col .inner-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.main-visual-col {
+}
 @media screen and (max-width: 1024px) {
     html {
         font-size: 24px;
