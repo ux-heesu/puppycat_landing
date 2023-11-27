@@ -68,6 +68,9 @@ body {
        common
 ---------------------------------------------------------------- */
 /* NanumSquareNeo light: 500; normal:600; bold:700; extrabold:800; black:900 */
+:root {
+    --neutral_600: #414348;
+}
 html {
     font-size: 62.5%;
     font-family: 'NanumSquareNeo', sans-serif !important;
@@ -164,7 +167,7 @@ section {
     padding-top: 0;
     background-image: url(../img/bg_puppy_main_floor.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     background-position: center bottom;
 }
 .main-visual-col::before {
@@ -181,11 +184,11 @@ section {
     content: '';
     position: absolute;
     right: 0;
-    bottom: 2rem;
+    top: -2rem;
     width: 61.7rem;
     height: 106.6rem;
-    max-height: 115vh;
-    background: url(../img/img_puppy_main_cat.png) no-repeat right bottom / contain;
+    max-height: 100vh;
+    background: url(../img/img_puppy_main_cat.png) no-repeat right top / contain;
 }
 .main-visual-col .inner-col {
     display: flex;
@@ -204,7 +207,7 @@ section {
     margin-top: 4rem;
     font-weight: 700;
     font-size: 2.8rem;
-    color: #414348;
+    color: var(--neutral_600);
     line-height: 1.6;
     text-align: center;
 }
@@ -240,10 +243,19 @@ section {
     right: 0.2rem;
     z-index: -1;
 }
+.media-col .lottie-cat {
+    width: 6rem;
+    height: 4.8rem;
+}
+.media-col .lottie-dog {
+    width: 4.1rem;
+    height: 4.5rem;
+}
 .media-col h2 + p {
     margin-top: 5rem;
     font-weight: 700;
     font-size: 2.4rem;
+    color: var(--neutral_600);
     line-height: 1.6;
 }
 .media-col .img-box {
@@ -292,9 +304,40 @@ section {
     left: 1.4rem;
     z-index: -1;
 }
+.slide-col {
+    position: relative;
+    padding: 12rem 0 32rem;
+    background-image: url(../img/bg_puppy_f_floor.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+}
+.slide-col::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+    width: 45.2rem;
+    height: 16.3rem;
+    background: url(../img/img_puppy_f_left.png) no-repeat left bottom / contain;
+}
+.slide-col::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    width: 61.6rem;
+    height: 20rem;
+    background: url(../img/img_puppy_f_right.png) no-repeat right bottom / contain;
+}
+@media screen and (max-width: 1450px) {
+    html {
+        font-size: 50%;
+    }
+}
 @media screen and (max-width: 1024px) {
     html {
-        font-size: 24px;
+        font-size: 20px;
         background: #f8f8f8;
     }
     .docSlider-inner {
@@ -308,10 +351,88 @@ section {
     .display-m {
         display: block;
     }
+
+    /* header footer */
+    header {
+        padding: 0.8rem 1.6rem;
+    }
+    header .logo {
+        width: 10rem;
+        height: 1.6rem;
+        background: url(../img/img_m_puppy_logo.png) no-repeat center / 100%;
+    }
+    header .btn-down {
+        width: 8.8rem;
+        margin-bottom: -0.9rem;
+    }
+    footer {
+        padding: 1.6rem 0;
+        text-align: left;
+    }
+    footer .f-logo {
+        margin: 1rem 0 2.6rem;
+    }
+    footer address,
+    footer .copyright {
+        font-size: 1rem;
+    }
+    footer .go-insta {
+        position: absolute;
+        top: -1rem;
+        right: 0;
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-top: 0;
+    }
+
+    /* content */
+    .docSlider-page {
+        padding-top: 4.8rem;
+    }
+    .main-visual-col {
+        background-size: contain;
+        background-image: url(../img/bg_m_puppy_main_floor.png);
+    }
+    .main-visual-col::before {
+        bottom: 2rem;
+        width: 22.3rem;
+        height: 37.1rem;
+        background: url(../img/img_m_puppy_main_dog.png) no-repeat left bottom / contain;
+    }
+    .main-visual-col::after {
+        top: -2rem;
+        width: 15.8rem;
+        height: 72.5rem;
+        background: url(../img/img_m_puppy_main_cat.png) no-repeat right top / contain;
+    }
+    .main-visual-col h2 {
+        width: 26rem;
+        height: 8.8rem;
+        background: url(../img/img_m_puppy_maintxt.png) no-repeat center / 100%;
+    }
+    .main-visual-col h2 + p {
+        margin-top: 5rem;
+        font-size: 1.6rem;
+    }
+    .main-visual-col .app-box {
+        display: block;
+        margin-top: 8rem;
+    }
+    .main-visual-col .app-box a {
+        width: 14rem;
+        height: 4.8rem;
+        background: url(../img/img_puppy_btn_appdown.png) no-repeat center / 100%;
+    }
+    .main-visual-col .app-box a img {
+        display: none;
+    }
+    .main-visual-col .app-box .app-qr {
+        display: none;
+    }
 }
 @media screen and (max-width: 768px) {
     html {
-        font-size: 3.2vw;
+        font-size: 2.5vw;
     }
 }
 @media screen and (max-width: 319px) {

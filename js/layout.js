@@ -24,14 +24,20 @@ window.addEventListener('load', function () {
     document.querySelector('.lottie-cat').innerHTML = '<lottie-player src="img/lottie_puppy_cat.json" background="transparent" speed=".9" loop autoplay></lottie-player>';
     document.querySelector('.lottie-dog').innerHTML = '<lottie-player src="img/lottie_puppy_dog.json" background="transparent" speed=".9" loop autoplay></lottie-player>';
 
-    let varUA = navigator.userAgent.toLowerCase();
-
-    if (varUA.indexOf('android') > -1) {
+    // 모바일 기기체크
+    let navUserAgent = navigator.userAgent.toLowerCase();
+    if (navUserAgent.indexOf('android') > -1) {
         //안드로이드
-        alert('안드로이드');
-    } else if (varUA.indexOf('iphone') > -1 || varUA.indexOf('ipad') > -1 || varUA.indexOf('ipod') > -1) {
+        document.querySelector('.app-google').style.display = 'block';
+        document.querySelector('.app-store').style.display = 'none';
+    } else if (navUserAgent.indexOf('iphone') > -1 || navUserAgent.indexOf('ipad') > -1 || navUserAgent.indexOf('ipod') > -1) {
         //IOS
-        alert('IOS');
+        document.querySelector('.app-google').style.display = 'none';
+        document.querySelector('.app-store').style.display = 'block';
+    } else {
+        // 그외
+        document.querySelector('.app-google').style.display = 'block';
+        document.querySelector('.app-store').style.display = 'none';
     }
 });
 
