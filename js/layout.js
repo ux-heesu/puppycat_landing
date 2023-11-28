@@ -100,6 +100,9 @@ window.addEventListener('load', function () {
 
     mobileCheck();
 
+    let pathSearch = window.location;
+    let newUrl = window.location.origin;
+
     // modal open
     let btnModalOpen = document.querySelectorAll('.btn-modal-open');
     for (let i = 0; i < btnModalOpen.length; i++) {
@@ -116,9 +119,13 @@ window.addEventListener('load', function () {
     for (let i = 0; i < btnModalClose.length; i++) {
         btnModalClose[i].addEventListener('click', function () {
             docSlider.enable(true);
-
+            window.history.replaceState(null, null, newUrl);
             this.closest('.modal').classList.remove('active');
         });
+    }
+
+    if (pathSearch.search == '?privacy=true') {
+        document.querySelector('#modalPrivacy').classList.add('active');
     }
 
     //롤링 배너 원본 생성
