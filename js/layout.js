@@ -136,7 +136,7 @@ window.addEventListener('load', function () {
     clone_reverse.id = 'roller-reverse2';
 
     // 필요한 부분에 부착
-    document.querySelector('.rollingbanner .wrap').appendChild(clone);
+    document.querySelector('.rolling-banner .wrap').appendChild(clone);
     document.querySelector('.wrap-reverse').appendChild(clone_reverse);
 
     //원본, 복제본 배너 위치 지정

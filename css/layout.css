@@ -367,104 +367,104 @@ section {
     background: url(../img/img_puppy_f_right.png) no-repeat right bottom / contain;
 }
 /* section3 흐르는 배너  */
-.slide-arae.rollingbanner {
+.slide-arae.rolling-banner {
     width: 100%;
     height: 63rem;
     overflow: hidden;
     /* background-color: lightblue; */
 }
 
-.rollingbanner .wrap,
-.rollingbanner .wrap-reverse {
+.rolling-banner .wrap,
+.rolling-banner .wrap-reverse {
     width: 100%;
     height: 30rem;
     overflow: hidden;
     position: relative;
 }
 
-.rollingbanner .wrap {
+.rolling-banner .wrap {
     margin-bottom: 3rem;
 }
 
-.rollingbanner .wrap ul,
-.rollingbanner .wrap-reverse ul {
+.rolling-banner .wrap ul,
+.rolling-banner .wrap-reverse ul {
     display: flex;
     align-items: center;
     gap: 3rem;
     width: 100%;
 }
 
-.rollingbanner .wrap .roller,
-.rollingbanner .wrap-reverse .roller-reverse {
+.rolling-banner .wrap .roller,
+.rolling-banner .wrap-reverse .roller-reverse {
     position: absolute;
 }
 
-.rollingbanner .wrap ul > li,
-.rollingbanner .wrap-reverse ul > li {
+.rolling-banner .wrap ul > li,
+.rolling-banner .wrap-reverse ul > li {
     width: 30rem;
     height: 30rem;
     text-align: center;
     border-radius: 2rem;
 }
 
-.rollingbanner .wrap ul > li:last-of-type {
+.rolling-banner .wrap ul > li:last-of-type {
     margin-right: 3rem;
 }
 
-.rollingbanner .wrap-reverse ul > li:first-of-type {
+.rolling-banner .wrap-reverse ul > li:first-of-type {
     margin-left: 3rem;
 }
-.rollingbanner .wrap ul > li:first-of-type {
+.rolling-banner .wrap ul > li:first-of-type {
     background: url('../img/img_puppy_banner_top_1.png') no-repeat center center;
     background-size: 100%;
 }
 
-.rollingbanner .wrap ul > li:nth-of-type(3) {
+.rolling-banner .wrap ul > li:nth-of-type(3) {
     background: url('../img/img_puppy_banner_top_3.png') no-repeat center center;
     background-size: 100%;
 }
-.rollingbanner .wrap ul > li:nth-of-type(4) {
+.rolling-banner .wrap ul > li:nth-of-type(4) {
     background: url('../img/img_puppy_banner_top_4.png') no-repeat center center;
     background-size: 100%;
 }
-.rollingbanner .wrap ul > li:nth-of-type(5) {
+.rolling-banner .wrap ul > li:nth-of-type(5) {
     background: url('../img/img_puppy_banner_top_5.png') no-repeat center center;
     background-size: 100%;
 }
-.rollingbanner .wrap ul > li:nth-of-type(6) {
+.rolling-banner .wrap ul > li:nth-of-type(6) {
     background: url('../img/img_puppy_banner_top_6.png') no-repeat center center;
     background-size: 100%;
 }
-.rollingbanner .wrap ul > li:last-of-type {
+.rolling-banner .wrap ul > li:last-of-type {
     background: url('../img/img_puppy_banner_top_7.png') no-repeat center center;
     background-size: 100%;
 }
 
-.rollingbanner .wrap-reverse ul > li:first-of-type {
+.rolling-banner .wrap-reverse ul > li:first-of-type {
     background: url('../img/img_puppy_banner_bottom_1.png') no-repeat center center;
     background-size: 100%;
 }
-.rollingbanner .wrap-reverse ul > li:nth-of-type(2) {
+.rolling-banner .wrap-reverse ul > li:nth-of-type(2) {
     background: url('../img/img_puppy_banner_bottom_2.png') no-repeat center center;
     background-size: 100%;
 }
-.rollingbanner .wrap-reverse ul > li:nth-of-type(3) {
+.rolling-banner .wrap-reverse ul > li:nth-of-type(3) {
     background: url('../img/img_puppy_banner_bottom_3.png') no-repeat center center;
     background-size: 100%;
 }
-.rollingbanner .wrap-reverse ul > li:nth-of-type(4) {
+.rolling-banner .wrap-reverse ul > li:nth-of-type(4) {
     background: url('../img/img_puppy_banner_bottom_4.png') no-repeat center center;
     background-size: 100%;
 }
-.rollingbanner .wrap-reverse ul > li:nth-of-type(5) {
+.rolling-banner .wrap-reverse ul > li:nth-of-type(5) {
     background: url('../img/img_puppy_banner_bottom_5.png') no-repeat center center;
     background-size: 100%;
 }
-.rollingbanner .wrap-reverse ul > li:nth-of-type(6) {
+.rolling-banner .wrap-reverse ul > li:nth-of-type(6) {
     background: url('../img/img_puppy_banner_bottom_6.png') no-repeat center center;
     background-size: 100%;
 }
-.rollingbanner .wrap-reverse ul > li:last-of-type {
+.rolling-banner .wrap-reverse ul > li:last-of-type {
     background: url('../img/img_puppy_banner_bottom_7.png') no-repeat center center;
     background-size: 100%;
 }
@@ -626,6 +626,7 @@ section {
         margin-bottom: -0.9rem;
     }
     footer {
+        margin-top: auto;
         padding: 1.6rem 0 2.4rem;
         text-align: left;
     }
@@ -746,8 +747,14 @@ section {
     .media-col .img-box .mobile-img::after {
         background-position: center top;
     }
+    .bottom-col {
+        display: flex;
+        flex-direction: column;
+    }
     .slide-col {
-        padding: 8rem 0 12rem;
+        height: 100%;
+        min-height: 55.2rem;
+        padding: 12vh 0 0;
         background-image: url(../img/bg_m_puppy_f_floor.png);
     }
     .slide-col::before {
@@ -762,37 +769,37 @@ section {
         height: 7.19rem;
         background: url(../img/img_m_puppy_f_right.png) no-repeat right bottom / contain;
     }
-    .slide-arae.rollingbanner {
+    .slide-arae.rolling-banner {
         height: 33.6rem;
     }
 
-    .rollingbanner .wrap,
-    .rollingbanner .wrap-reverse {
+    .rolling-banner .wrap,
+    .rolling-banner .wrap-reverse {
         height: 16rem;
     }
 
-    .rollingbanner .wrap {
+    .rolling-banner .wrap {
         margin-bottom: 1.5rem;
     }
 
-    .rollingbanner .wrap ul,
-    .rollingbanner .wrap-reverse ul {
+    .rolling-banner .wrap ul,
+    .rolling-banner .wrap-reverse ul {
         gap: 1.6rem;
     }
 
-    .rollingbanner .wrap ul > li,
-    .rollingbanner .wrap-reverse ul > li {
+    .rolling-banner .wrap ul > li,
+    .rolling-banner .wrap-reverse ul > li {
         width: 16rem;
         height: 16rem;
         text-align: center;
         border-radius: 2rem;
     }
 
-    .rollingbanner .wrap ul > li:last-of-type {
+    .rolling-banner .wrap ul > li:last-of-type {
         margin-right: 1.6rem;
     }
 
-    .rollingbanner .wrap-reverse ul > li:first-of-type {
+    .rolling-banner .wrap-reverse ul > li:first-of-type {
         margin-left: 1.6rem;
     }
     /* modal */
