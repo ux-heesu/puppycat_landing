@@ -126,6 +126,7 @@ window.addEventListener('load', function () {
 
     if (pathSearch.search == '?privacy=true') {
         document.querySelector('#modalPrivacy').classList.add('active');
+        docSlider.enable(false);
     }
 
     //롤링 배너 원본 생성
