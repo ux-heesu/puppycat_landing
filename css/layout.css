@@ -451,10 +451,6 @@ section {
     background: url('../img/img_puppy_banner_bottom_4.png') no-repeat center center;
     background-size: 100%;
 }
-.rolling-banner .wrap-reverse ul > li:nth-of-type(5) {
-    background: url('../img/img_puppy_banner_bottom_5.png') no-repeat center center;
-    background-size: 100%;
-}
 .rolling-banner .wrap-reverse ul > li:nth-of-type(6) {
     background: url('../img/img_puppy_banner_bottom_6.png') no-repeat center center;
     background-size: 100%;
