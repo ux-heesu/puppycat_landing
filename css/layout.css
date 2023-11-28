@@ -357,7 +357,7 @@ section {
 /* section3 흐르는 배너  */
 .slide-arae.rollingbanner {
     width: 100%;
-    height: 31.5rem;
+    height: 63rem;
     overflow: hidden;
     /* background-color: lightblue; */
 }
@@ -365,20 +365,20 @@ section {
 .rollingbanner .wrap,
 .rollingbanner .wrap-reverse {
     width: 100%;
-    height: 15rem;
+    height: 30rem;
     overflow: hidden;
     position: relative;
 }
 
 .rollingbanner .wrap{
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .rollingbanner .wrap ul,
 .rollingbanner .wrap-reverse ul {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 3rem;
     width: 100%;
 }
 
@@ -389,18 +389,18 @@ section {
 
 .rollingbanner .wrap ul > li,
 .rollingbanner .wrap-reverse ul > li {
-    width: 15rem;
-    height: 15rem;
+    width: 30rem;
+    height: 30rem;
     text-align: center;
-    border-radius: 1rem;
+    border-radius: 2rem;
 }
 
 .rollingbanner .wrap ul > li:last-of-type {
-    margin-right: 1.5rem;
+    margin-right: 3rem;
 }
 
 .rollingbanner .wrap-reverse ul > li:first-of-type {
-    margin-left: 1.5rem;
+    margin-left: 3rem;
 }
 
 /* background-img */
