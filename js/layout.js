@@ -46,10 +46,33 @@ window.addEventListener('load', function () {
     docPosition();
     headerVisible();
 
+    // docSlider.enable(false);
+
     document.querySelector('.lottie-cat').innerHTML = '<lottie-player src="img/lottie_puppy_cat.json" background="transparent" speed=".9" loop autoplay></lottie-player>';
     document.querySelector('.lottie-dog').innerHTML = '<lottie-player src="img/lottie_puppy_dog.json" background="transparent" speed=".9" loop autoplay></lottie-player>';
 
     mobileCheck();
+
+    // modal open
+    let btnModalOpen = document.querySelectorAll('.btn-modal-open');
+    for (let i = 0; i < btnModalOpen.length; i++) {
+        btnModalOpen[i].addEventListener('click', function () {
+            docSlider.enable(false);
+
+            let thisName = this.dataset.name;
+            document.querySelector('#' + thisName).classList.add('active');
+        });
+    }
+
+    // modal close
+    let btnModalClose = document.querySelectorAll('.btn-modal-close');
+    for (let i = 0; i < btnModalClose.length; i++) {
+        btnModalClose[i].addEventListener('click', function () {
+            docSlider.enable(true);
+
+            this.closest('.modal').classList.remove('active');
+        });
+    }
 });
 
 window.addEventListener('resize', function () {
