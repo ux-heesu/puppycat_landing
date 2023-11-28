@@ -153,6 +153,7 @@ footer .copyright {
     font-size: 1.2rem;
     color: #999;
     line-height: 1.4;
+    text-decoration: none;
 }
 footer address span {
     display: inline-block;
