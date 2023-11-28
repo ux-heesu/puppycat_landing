@@ -154,8 +154,8 @@ footer .copyright {
     color: #999;
     line-height: 1.4;
     text-decoration: none;
+    text-decoration-line: none;
     -moz-text-decoration-line: none;
-    
 }
 footer address span {
     display: inline-block;
@@ -451,10 +451,6 @@ section {
     background: url('../img/img_puppy_banner_bottom_4.png') no-repeat center center;
     background-size: 100%;
 }
-.rolling-banner .wrap-reverse ul > li:nth-of-type(5) {
-    background: url('../img/img_puppy_banner_bottom_5.png') no-repeat center center;
-    background-size: 100%;
-}
 .rolling-banner .wrap-reverse ul > li:nth-of-type(6) {
     background: url('../img/img_puppy_banner_bottom_6.png') no-repeat center center;
     background-size: 100%;
@@ -637,7 +633,9 @@ section {
     footer address,
     footer .copyright {
         font-size: 1rem;
-    }
+        text-decoration-line: none;
+        -moz-text-decoration-line: none;
+}
     footer .go-insta {
         position: absolute;
         top: -1rem;
