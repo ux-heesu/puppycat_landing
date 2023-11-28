@@ -154,6 +154,9 @@ footer .copyright {
     color: #999;
     line-height: 1.4;
     text-decoration: none;
+    -moz-text-decoration-line: none;
+    -webkit-text-stroke: none;
+    
 }
 footer address span {
     display: inline-block;
