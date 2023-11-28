@@ -154,8 +154,8 @@ footer .copyright {
     color: #999;
     line-height: 1.4;
     text-decoration: none;
+    text-decoration-line: none;
     -moz-text-decoration-line: none;
-    
 }
 footer address span {
     display: inline-block;
@@ -637,7 +637,9 @@ section {
     footer address,
     footer .copyright {
         font-size: 1rem;
-    }
+        text-decoration-line: none;
+        -moz-text-decoration-line: none;
+}
     footer .go-insta {
         position: absolute;
         top: -1rem;
