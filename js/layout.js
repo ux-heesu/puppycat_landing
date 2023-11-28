@@ -101,7 +101,7 @@ window.addEventListener('load', function () {
     mobileCheck();
 
     let pathSearch = window.location;
-    let newUrl = window.location.origin;
+    let originUrl = window.location.origin + window.location.pathname;
 
     // modal open
     let btnModalOpen = document.querySelectorAll('.btn-modal-open');
@@ -119,7 +119,7 @@ window.addEventListener('load', function () {
     for (let i = 0; i < btnModalClose.length; i++) {
         btnModalClose[i].addEventListener('click', function () {
             docSlider.enable(true);
-            window.history.replaceState(null, null, newUrl);
+            window.history.replaceState(null, null, originUrl);
             this.closest('.modal').classList.remove('active');
         });
     }
