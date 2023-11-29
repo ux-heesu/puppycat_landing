@@ -197,7 +197,7 @@ section {
     padding-top: 0;
     background-image: url(../img/bg_puppy_main_floor.png);
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100%;
     background-position: center bottom;
 }
 .main-visual-col::before {
@@ -635,7 +635,7 @@ section {
         font-size: 1rem;
         text-decoration-line: none;
         -moz-text-decoration-line: none;
-}
+    }
     footer .go-insta {
         position: absolute;
         top: -1rem;
