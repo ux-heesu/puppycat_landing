@@ -191,7 +191,7 @@ section {
     background-color: #fffef9;
 }
 .docSlider-page {
-    padding-top: 7.3rem;
+    padding: 7.3rem 0 0;
 }
 .main-visual-col {
     padding-top: 0;
@@ -345,6 +345,13 @@ section {
         margin-top: -870%;
     }
 }
+.bottom-col {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.bottom-col::-webkit-scrollbar {
+    display: none;
+}
 .slide-col {
     position: relative;
     padding: 12rem 0 32rem;
@@ -478,7 +485,6 @@ section {
 .roller.clone-reverse {
     animation: 33s linear 0s infinite normal none running rollingright2;
 }
-
 /* modal */
 .modal {
     display: none;
@@ -577,7 +583,6 @@ section {
 .terms-wrap a {
     color: #0069c2;
 }
-
 @media screen and (max-width: 1450px) {
     html {
         font-size: 50%;
