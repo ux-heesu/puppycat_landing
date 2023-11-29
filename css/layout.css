@@ -405,12 +405,14 @@ section {
     text-align: center;
     border-radius: 2rem;
 }
-.rolling-banner .wrap ul > li:last-of-type {
-    margin-right: 3rem;
+.rolling-banner .wrap .roller+.roller {
+    padding-left: 3rem;
 }
-.rolling-banner .wrap-reverse ul > li:first-of-type {
-    margin-left: 3rem;
+.rolling-banner .wrap-reverse .roller-reverse+.roller-reverse {
+    padding-right: 3rem;
 }
+
+
 .rolling-banner .wrap ul > li:first-of-type {
     background: url('../img/img_puppy_banner_top_1.png') no-repeat center center;
     background-size: 100%;
@@ -435,6 +437,9 @@ section {
     background: url('../img/img_puppy_banner_top_7.png') no-repeat center center;
     background-size: 100%;
 }
+
+
+
 .rolling-banner .wrap-reverse ul > li:first-of-type {
     background: url('../img/img_puppy_banner_bottom_1.png') no-repeat center center;
     background-size: 100%;
@@ -783,11 +788,11 @@ section {
         text-align: center;
         border-radius: 2rem;
     }
-    .rolling-banner .wrap ul > li:last-of-type {
-        margin-right: 1.6rem;
+    .rolling-banner .wrap .roller+.roller {
+        padding-left: 1.6rem;
     }
-    .rolling-banner .wrap-reverse ul > li:first-of-type {
-        margin-left: 1.6rem;
+    .rolling-banner .wrap-reverse .roller-reverse+.roller-reverse {
+        padding-right: 1.6rem;
     }
     /* modal */
     .modal-content {
