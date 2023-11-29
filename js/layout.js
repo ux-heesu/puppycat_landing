@@ -39,11 +39,11 @@ function mobileCheck() {
 function startRoller() {
     let betweenDistance = 1; //이동 크기 - 정수여야 함
 
-    originalID = window.setInterval(betweenRollCallback, parseInt(1000 / 1000), betweenDistance, document.querySelector('#roller1'));
-    cloneID = window.setInterval(betweenRollCallback, parseInt(1000 / 1000), betweenDistance, document.querySelector('#roller2'));
+    originalID = window.setInterval(betweenRollCallback, parseInt(1000 / 80), betweenDistance, document.querySelector('#roller1'));
+    cloneID = window.setInterval(betweenRollCallback, parseInt(1000 / 80), betweenDistance, document.querySelector('#roller2'));
 
-    original_reverseID = window.setInterval(betweenRollCallbackReverse, parseInt(1000 / 1000), betweenDistance, document.querySelector('#roller-reverse1'));
-    clone_reverseID = window.setInterval(betweenRollCallbackReverse, parseInt(1000 / 1000), betweenDistance, document.querySelector('#roller-reverse2'));
+    original_reverseID = window.setInterval(betweenRollCallbackReverse, parseInt(1000 / 80), betweenDistance, document.querySelector('#roller-reverse1'));
+    clone_reverseID = window.setInterval(betweenRollCallbackReverse, parseInt(1000 / 80), betweenDistance, document.querySelector('#roller-reverse2'));
 }
 
 //롤링 정지

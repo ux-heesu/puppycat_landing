@@ -391,7 +391,7 @@ section {
 .rolling-banner .wrap-reverse ul {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    /* gap: 3rem; */
     width: 100%;
 }
 .rolling-banner .wrap .roller,
@@ -404,12 +404,16 @@ section {
     height: 30rem;
     text-align: center;
     border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
-.rolling-banner .wrap .roller+.roller {
-    padding-left: 3rem;
+.rolling-banner .wrap ul > li{
+    margin-right: 3rem;
 }
-.rolling-banner .wrap-reverse .roller-reverse+.roller-reverse {
-    padding-right: 3rem;
+.rolling-banner .wrap-reverse ul > li{
+    margin-left: 3rem;
 }
 
 
@@ -779,7 +783,7 @@ section {
     }
     .rolling-banner .wrap ul,
     .rolling-banner .wrap-reverse ul {
-        gap: 1.6rem;
+        /* gap: 1.6rem; */
     }
     .rolling-banner .wrap ul > li,
     .rolling-banner .wrap-reverse ul > li {
@@ -788,12 +792,14 @@ section {
         text-align: center;
         border-radius: 2rem;
     }
-    .rolling-banner .wrap .roller+.roller {
-        padding-left: 1.6rem;
+    .rolling-banner .wrap ul > li {
+        margin-left: 1.6rem;
     }
-    .rolling-banner .wrap-reverse .roller-reverse+.roller-reverse {
-        padding-right: 1.6rem;
+    .rolling-banner .wrap-reverse ul > li {
+        margin-right: 1.6rem;
     }
+
+
     /* modal */
     .modal-content {
         padding: 0 3.2rem 3.2rem;
