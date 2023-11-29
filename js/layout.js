@@ -39,11 +39,11 @@ function mobileCheck() {
 function startRoller() {
     let betweenDistance = 1; //이동 크기 - 정수여야 함
 
-    originalID = window.setInterval(betweenRollCallback, parseInt(1000 / 80), betweenDistance, document.querySelector('#roller1'));
-    cloneID = window.setInterval(betweenRollCallback, parseInt(1000 / 80), betweenDistance, document.querySelector('#roller2'));
+    originalID = window.setInterval(betweenRollCallback, parseInt(1000 / 1000), betweenDistance, document.querySelector('#roller1'));
+    cloneID = window.setInterval(betweenRollCallback, parseInt(1000 / 1000), betweenDistance, document.querySelector('#roller2'));
 
-    original_reverseID = window.setInterval(betweenRollCallbackReverse, parseInt(1000 / 80), betweenDistance, document.querySelector('#roller-reverse1'));
-    clone_reverseID = window.setInterval(betweenRollCallbackReverse, parseInt(1000 / 80), betweenDistance, document.querySelector('#roller-reverse2'));
+    original_reverseID = window.setInterval(betweenRollCallbackReverse, parseInt(1000 / 1000), betweenDistance, document.querySelector('#roller-reverse1'));
+    clone_reverseID = window.setInterval(betweenRollCallbackReverse, parseInt(1000 / 1000), betweenDistance, document.querySelector('#roller-reverse2'));
 }
 
 //롤링 정지
@@ -167,4 +167,16 @@ window.addEventListener('load', function () {
 window.addEventListener('resize', function () {
     docPosition();
     mobileCheck();
+
+    //리사이즈 시 원본, 복제본 배너 위치 재지정
+    document.querySelector('#roller1').style.left = '0px';
+    document.querySelector('#roller2').style.left = document.querySelector('.roller ul').offsetWidth + 'px';
+
+    document.querySelector('#roller-reverse1').style.right = '0px';
+    document.querySelector('#roller-reverse2').style.right = document.querySelector('.roller-reverse ul').offsetWidth + 'px';
+
+    // 실행되고 있던 roller관련 setInterval 제거
+    stopRoller();
+    // roller setInterval 재실행
+    startRoller();
 });
