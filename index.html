@@ -20,7 +20,8 @@
                     <a title="PUPPYCAT home" target="_blank" href="#" class="logo"><span class="blind">puppycat</span></a>
                 </h1>
                 <a title="puppcat 앱 다운로드" target="_blank" href="#" class="btn-down">
-                    <lottie-player src="img/lottie_puppy_btn_appdown.json" background="transparent" speed=".9" loop autoplay></lottie-player>
+                    <lottie-player id="appDownLottie" class="display-pc" src="img/lottie_puppy_btn_appdown.json" background="transparent" speed=".9" loop></lottie-player>
+                    <lottie-player id="appDownLottie" class="display-m" src="img/lottie_m_puppy_btn_appdown.json" background="transparent" speed=".9" loop></lottie-player>
                 </a>
             </header>
             <div class="docSlider">
@@ -28,8 +29,8 @@
                     <div class="inner-col">
                         <h2><span class="blind">close to you PUPPYCAT</span></h2>
                         <p>
-                            이 세상 모든 누구나의 강아지와 고양이가<br />
-                            모여드는 당신에게 가장 가까운 곳
+                            이 세상 모든 강아지와 고양이가 모여드는<br />
+                            당신에게 가장 가까운 곳
                         </p>
 
                         <div class="app-box">
@@ -108,8 +109,8 @@
                             <h2 class="f-logo"><span class="blind">PUPPYCAT</span></h2>
                             <div class="terms-box">
                                 <a href="javascript:void(0)" class="btn-modal-open" data-name="modalPrivacy">개인정보처리방침</a>
-                                <!-- <a href="#">이용약관</a>
-                                <a href="#">위치기반 서비스</a> -->
+                                <a href="#">이용약관</a>
+                                <a href="#">위치기반 서비스</a>
                             </div>
                             <address>
                                 <div>
@@ -130,6 +131,7 @@
             </div>
 
             <div class="modal" id="modalPrivacy">
+                <div class="dimmed"></div>
                 <div class="modal-content">
                     <div class="modal-head">
                         <h2>개인정보처리방침</h2>
@@ -138,11 +140,11 @@
                     <div class="modal-body">
                         <div class="terms-select-wrap">
                             <strong>시행일자 : 2023.11.01</strong>
-                            <!-- <select>
+                            <select>
                                 <option disabled selected>이전 개인정보처리방침 보기</option>
                                 <option>2023.10.01</option>
                                 <option>2023.08.01</option>
-                            </select> -->
+                            </select>
                         </div>
                         <div class="terms-wrap">
                             <h3>퍼피캣 개인정보처리방침</h3>

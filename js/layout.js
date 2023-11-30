@@ -115,14 +115,20 @@ window.addEventListener('load', function () {
     }
 
     // modal close
-    let btnModalClose = document.querySelectorAll('.btn-modal-close');
-    for (let i = 0; i < btnModalClose.length; i++) {
-        btnModalClose[i].addEventListener('click', function () {
-            docSlider.enable(true);
-            window.history.replaceState(null, null, originUrl);
-            this.closest('.modal').classList.remove('active');
-        });
+    function modalClose(target) {
+        for (let i = 0; i < target.length; i++) {
+            target[i].addEventListener('click', function () {
+                docSlider.enable(true);
+                window.history.replaceState(null, null, originUrl);
+                this.closest('.modal').classList.remove('active');
+            });
+        }
     }
+
+    let btnModalClose = document.querySelectorAll('.btn-modal-close');
+    let btnModalDimmed = document.querySelectorAll('.dimmed');
+    modalClose(btnModalClose);
+    modalClose(btnModalDimmed);
 
     if (pathSearch.search == '?privacy=true') {
         document.querySelector('#modalPrivacy').classList.add('active');
