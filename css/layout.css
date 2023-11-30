@@ -415,6 +415,7 @@ section {
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
+    overflow: hidden;
 }
 .rolling-banner .wrap ul > li {
     margin-right: 3rem;
