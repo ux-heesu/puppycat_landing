@@ -98,6 +98,10 @@ html {
     margin: 0 auto;
 }
 
+
+@media (orientation: portrait) {
+
+
 /* header footer */
 header {
     position: fixed;
@@ -854,5 +858,27 @@ section {
 @media screen and (max-width: 319px) {
     html {
         font-size: 10px;
+    }
+}
+
+    
+}
+
+@media (orientation: landscape) {
+    body>.wrap{
+        display: none;
+    }
+
+    body::after{
+        content: '퍼피캣 홈페이지는 가로모드를 지원하지 않는 홈페이지입니다. 세로모드로 이용해 주세요!';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        line-height: 100%;
+        color: var(--neutral_600);
+        background-color: #fff;
     }
 }
