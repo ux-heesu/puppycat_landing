@@ -372,7 +372,7 @@ section {
 .slide-col::after {
     content: '';
     position: absolute;
-    right: 0;
+    right: -5rem;
     bottom: 2rem;
     width: 61.6rem;
     height: 20rem;
@@ -769,6 +769,7 @@ section {
         background: url(../img/img_m_puppy_f_left.png) no-repeat left bottom / contain;
     }
     .slide-col::after {
+        right: -1.8rem;
         bottom: 0.5rem;
         width: 20.4rem;
         height: 7.19rem;
