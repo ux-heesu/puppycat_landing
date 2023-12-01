@@ -17,22 +17,33 @@ function mobileCheck() {
     if (browserWidth <= 1024) {
         // 모바일 기기체크
         let navUserAgent = navigator.userAgent.toLowerCase();
+
+        let appGoogle = document.querySelectorAll('.app-google');
+        let appStore = document.querySelectorAll('.app-store');
+
+        function controlDisplay(target, nonTarget) {
+            for (let i = 0; i < target.length; i++) {
+                target[i].style.display = 'block';
+                nonTarget[i].style.display = 'none';
+            }
+        }
         if (navUserAgent.indexOf('android') > -1) {
             //안드로이드
-            document.querySelector('.app-google').style.display = 'block';
-            document.querySelector('.app-store').style.display = 'none';
+            controlDisplay(appGoogle, appStore);
         } else if (navUserAgent.indexOf('iphone') > -1 || navUserAgent.indexOf('ipad') > -1 || navUserAgent.indexOf('ipod') > -1) {
             //IOS
-            document.querySelector('.app-google').style.display = 'none';
-            document.querySelector('.app-store').style.display = 'block';
+            controlDisplay(appStore, appGoogle);
         } else {
             // 그외
-            document.querySelector('.app-google').style.display = 'block';
-            document.querySelector('.app-store').style.display = 'none';
+            controlDisplay(appGoogle, appStore);
         }
     } else {
-        document.querySelector('.app-google').style.display = 'block';
-        document.querySelector('.app-store').style.display = 'block';
+        function controlDisplay() {
+            for (let i = 0; i < target.length; i++) {
+                appGoogle[i].style.display = 'block';
+                appStore[i].style.display = 'block';
+            }
+        }
     }
 }
 
@@ -138,7 +149,7 @@ window.addEventListener('load', function () {
     document.querySelector('.lottie-banner-cat').innerHTML = '<lottie-player src="img/lottie_puppy_banner_cat.json" background="transparent" speed=".9" loop autoplay></lottie-player>';
     document.querySelector('.lottie-banner-round').innerHTML = '<lottie-player src="img/lottie_puppy_banner_round.json" background="transparent" speed=".9" loop autoplay></lottie-player>';
 
-    // mobileCheck();
+    mobileCheck();
 
     let pathSearch = window.location;
     let originUrl = window.location.origin + window.location.pathname;
@@ -212,7 +223,7 @@ window.addEventListener('load', function () {
 
 window.addEventListener('resize', function () {
     docPosition();
-    // mobileCheck();
+    mobileCheck();
 
     //리사이즈 시 원본, 복제본 배너 위치 재지정
     document.querySelector('#roller1').style.left = '0px';

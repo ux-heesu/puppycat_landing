@@ -6,7 +6,7 @@
         <title>PuppyCat</title>
 
         <!-- favicon -->
-        <link rel="shortcut icon" href="img/favicon-16x16.ico" />
+        <link rel="shortcut icon" href="img/favicon_32x32.ico" />
 
         <link href="css/reset.css" rel="stylesheet" type="text/css" />
         <link href="css/font/NanumSquareNeo.css" rel="stylesheet" type="text/css" />
@@ -22,10 +22,21 @@
                 <h1>
                     <a title="PUPPYCAT home" target="_blank" href="#" class="logo"><span class="blind">puppycat</span></a>
                 </h1>
-                <a title="puppcat 앱 다운로드" target="_blank" href="#" class="btn-down">
-                    <lottie-player class="btn-animation-area-pc display-pc" src="img/lottie_puppy_btn_appdown.json" background="transparent" speed=".9" loop hover></lottie-player>
-                    <lottie-player class="btn-animation-area-mo display-m" src="img/lottie_m_puppy_btn_appdown.json" background="transparent" speed=".9" loop autoplay></lottie-player>
-                </a>
+                <div class="btn-down-wrap display-pc">
+                    <button class="btn-down">
+                        <lottie-player class="btn-animation-area-pc" src="img/lottie_puppy_btn_appdown.json" background="transparent" speed=".9" loop hover></lottie-player>
+                    </button>
+                    <img src="img/img_puppy_qr_layer.png" class="app-down-layer" alt="QR코드를 스캔해보세요! 퍼피캣 다운받기" />
+                </div>
+
+                <div class="btn-down display-m">
+                    <a title="puppcat 앱 다운로드" target="_blank" href="#" class="app-google">
+                        <lottie-player class="btn-animation-area-mo display-m" src="img/lottie_m_puppy_btn_appdown.json" background="transparent" speed=".9" loop autoplay></lottie-player>
+                    </a>
+                    <a title="puppcat 앱 다운로드" target="_blank" href="#" class="app-store">
+                        <lottie-player class="btn-animation-area-mo display-m" src="img/lottie_m_puppy_btn_appdown.json" background="transparent" speed=".9" loop autoplay></lottie-player>
+                    </a>
+                </div>
             </header>
             <div class="docSlider">
                 <section class="main-visual-col">
@@ -35,11 +46,19 @@
                             이 세상 모든 강아지와 고양이가 모여드는<br />
                             당신에게 가장 가까운 곳
                         </p>
-                        <div class="app-box">
-                            <img src="../img/img_puppy_qr.png" class="img-qr display-pc" alt="QR코드를 스캔해보세요! 퍼피캣 다운받기" />
-                            <img src="../img/img_puppy_btn_appdown.png" class="img-qr display-m" alt="QR코드를 스캔해보세요! 퍼피캣 다운받기" />
+                        <div class="app-box display-pc">
+                            <img src="../img/img_puppy_qr.png" class="img-qr" alt="QR코드를 스캔해보세요! 퍼피캣 다운받기" />
+                        </div>
+                        <div class="app-box display-m">
+                            <a title="puppcat 앱 다운로드" target="_blank" href="#" class="app-google">
+                                <img src="../img/img_puppy_btn_appdown.png" class="img-qr" alt="앱 다운로드" />
+                            </a>
+                            <a title="puppcat 앱 다운로드" target="_blank" href="#" class="app-store">
+                                <img src="../img/img_puppy_btn_appdown.png" class="img-qr" alt="앱 다운로드" />
+                            </a>
                         </div>
                     </div>
+                    <div class="floor"></div>
                 </section>
                 <section class="media-col">
                     <div class="inner-col">
