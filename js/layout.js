@@ -21,27 +21,18 @@ function mobileCheck() {
             //안드로이드
             document.querySelector('.app-google').style.display = 'block';
             document.querySelector('.app-store').style.display = 'none';
-            document.querySelector('.btn-animation-area-pc').style.display = 'none';
-            document.querySelector('.btn-animation-area-mo').style.display = 'block';
-            
         } else if (navUserAgent.indexOf('iphone') > -1 || navUserAgent.indexOf('ipad') > -1 || navUserAgent.indexOf('ipod') > -1) {
             //IOS
             document.querySelector('.app-google').style.display = 'none';
             document.querySelector('.app-store').style.display = 'block';
-            document.querySelector('.btn-animation-area-pc').style.display = 'none';
-            document.querySelector('.btn-animation-area-mo').style.display = 'block';
         } else {
             // 그외
             document.querySelector('.app-google').style.display = 'block';
             document.querySelector('.app-store').style.display = 'none';
-            document.querySelector('.btn-animation-area-pc').style.display = 'none';
-            document.querySelector('.btn-animation-area-mo').style.display = 'block';
         }
     } else {
         document.querySelector('.app-google').style.display = 'block';
         document.querySelector('.app-store').style.display = 'block';
-        document.querySelector('.btn-animation-area-mo').style.display = 'none';
-        document.querySelector('.btn-animation-area-pc').style.display = 'block';
     }
 }
 
@@ -217,10 +208,6 @@ window.addEventListener('load', function () {
     clone_reverse.classList.add('clone-reverse');
 
     startRoller();
-
-
-    
-    
 });
 
 window.addEventListener('resize', function () {
