@@ -802,10 +802,22 @@ section {
         height: 93vh;
         max-width: 100%;
         padding: 1.4rem;
-    }
+        border-radius: 4.2rem;
+        -webkit-border-radius: 4.2rem;
+        -moz-border-radius: 4.2rem;
+        -ms-border-radius: 4.2rem;
+        -o-border-radius: 4.2rem;
+}
     .media-col .img-box .mobile-img::after {
         background-position: center top;
     }
+    .media-col .img-box .mobile-img::before{
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+}
     .media-col .img-box .rolling-mobile li,
     .media-col .img-box .rolling-mobile li img {
         width: 100%;
