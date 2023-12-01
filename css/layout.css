@@ -810,9 +810,6 @@ section {
     .media-col .img-box .rolling-mobile li img {
         width: 100%;
     }
-    .media-col .img-box .mobile-img::before {
-        border-width: 2rem;
-    }
     .bottom-col {
         display: flex;
         flex-direction: column;
