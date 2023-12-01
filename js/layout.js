@@ -82,6 +82,44 @@ function betweenRollCallbackReverse(d, roller) {
 
 let original_reverseID, clone_reverseID;
 
+function animateElement(element, targetTop, duration, callback) {
+    const startTop = element.offsetLeft;
+    const distance = targetTop - startTop;
+    const startTime = performance.now();
+
+    function step(timestamp) {
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const currentPosition = startTop + distance * progress;
+        element.style.left = currentPosition + 'px';
+
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        } else {
+            if (typeof callback === 'function') {
+                callback();
+            }
+        }
+    }
+
+    window.requestAnimationFrame(step);
+}
+
+function RollingList(listName) {
+    let targetList = 0;
+    let ulElement = document.querySelector(listName).querySelector('ul');
+    let liElements = ulElement.getElementsByTagName('li');
+
+    setInterval(function () {
+        targetList = liElements[0];
+        animateElement(ulElement, -targetList.offsetWidth, 1000, function () {
+            ulElement.appendChild(liElements[0].cloneNode(true));
+            ulElement.style.left = '0px';
+            ulElement.removeChild(liElements[0]);
+        });
+    }, 5000);
+}
+
 window.addEventListener('load', function () {
     /*docslider*/
     docSlider.init({
@@ -92,13 +130,15 @@ window.addEventListener('load', function () {
     docPosition();
     headerVisible();
 
+    RollingList('.rolling-mobile');
+
     document.querySelector('.lottie-cat').innerHTML = '<lottie-player src="img/lottie_puppy_cat.json" background="transparent" speed=".9" loop autoplay></lottie-player>';
     document.querySelector('.lottie-dog').innerHTML = '<lottie-player src="img/lottie_puppy_dog.json" background="transparent" speed=".9" loop autoplay></lottie-player>';
 
     document.querySelector('.lottie-banner-cat').innerHTML = '<lottie-player src="img/lottie_puppy_banner_cat.json" background="transparent" speed=".9" loop autoplay></lottie-player>';
     document.querySelector('.lottie-banner-round').innerHTML = '<lottie-player src="img/lottie_puppy_banner_round.json" background="transparent" speed=".9" loop autoplay></lottie-player>';
 
-    mobileCheck();
+    // mobileCheck();
 
     let pathSearch = window.location;
     let originUrl = window.location.origin + window.location.pathname;
@@ -172,7 +212,7 @@ window.addEventListener('load', function () {
 
 window.addEventListener('resize', function () {
     docPosition();
-    mobileCheck();
+    // mobileCheck();
 
     //리사이즈 시 원본, 복제본 배너 위치 재지정
     document.querySelector('#roller1').style.left = '0px';
